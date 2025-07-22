@@ -1,12 +1,11 @@
 import Editor from '@monaco-editor/react';
-import { useState } from 'react';
 
-function CodeEditor({ code, onChange }) {
+function CodeEditor({ code, language, onChange }) {
   return (
     <div className="h-full">
       <Editor
         height="100%"
-        defaultLanguage="html"
+        language={language}
         value={code}
         onChange={onChange}
         theme="vs-dark"
@@ -14,6 +13,7 @@ function CodeEditor({ code, onChange }) {
           fontSize: 14,
           minimap: { enabled: false },
           scrollBeyondLastLine: false,
+          automaticLayout: true,
         }}
       />
     </div>
