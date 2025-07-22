@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import CodeEditor from './components/Editor'
 
 function App() {
 
@@ -13,8 +14,8 @@ function App() {
       {/* main content  */}
       <main className='flex-1 flex'>
         {/* Editor Area  */}
-        <div className="flex-1 bg-gray-900 p-4">
-          <h2 className='text-green-400'>Editor will go here</h2>
+        <div className="flex-1">
+          <CodeEditor/>
         </div>
 
         {/* Preview Area  */}
