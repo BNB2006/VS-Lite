@@ -1,8 +1,21 @@
 import { useState } from 'react'
-import './App.css'
 import CodeEditor from './components/Editor'
+import Preview from './components/Preview'
 
 function App() {
+  const [htmlCode, setHtmlCode] = useState(`<!DOCTYPE html>
+<head>
+  <title>Hello World</title>
+  <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: gray; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+  <h1>Hello from VSCode Lite</h1>
+  <p>Edit the code on the left to see changes here.</p>
+</body>
+</html>`)
 
   return (
     <div className='h-screen bg-gray-900 text-white flex flex-col'>
@@ -15,12 +28,12 @@ function App() {
       <main className='flex-1 flex'>
         {/* Editor Area  */}
         <div className="flex-1">
-          <CodeEditor/>
+          <CodeEditor code={htmlCode} onChange={setHtmlCode}/>
         </div>
 
         {/* Preview Area  */}
-        <div className="flex-1 bg-white text-black p-4">
-          <h2 className='text-blue-600'>Preview will go here</h2>
+        <div className="flex-1 ">
+          <Preview htmlCode={htmlCode}/>
         </div>
       </main>
     </div>
@@ -28,3 +41,5 @@ function App() {
 }
 
 export default App
+
+

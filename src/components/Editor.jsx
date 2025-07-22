@@ -1,24 +1,14 @@
 import Editor from '@monaco-editor/react';
 import { useState } from 'react';
 
-function CodeEditor() {
-  const [code, setCode] = useState(`<!DOCTYPE html>
-<html>
-<head>
-    <title>Hello World</title>
-</head>
-<body>
-    <h1>Hello from VSCode Lite!</h1>
-</body>
-</html>`);
-
+function CodeEditor({ code, onChange }) {
   return (
     <div className="h-full">
       <Editor
         height="100%"
         defaultLanguage="html"
         value={code}
-        onChange={setCode}
+        onChange={onChange}
         theme="vs-dark"
         options={{
           fontSize: 14,
