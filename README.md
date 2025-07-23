@@ -14,7 +14,7 @@ A browser-based code editor built with **Vite** and **React**, inspired by VS Co
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/webcode-playground.git
+   git clone https://github.com/BNB2006/VS-Lite.git
    cd webcode-playground
    ```
 
