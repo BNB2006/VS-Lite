@@ -1,6 +1,6 @@
 import Editor from '@monaco-editor/react';
 
-function CodeEditor({ code, language, onChange }) {
+function CodeEditor({ code, language, theme, onChange }) {
   return (
     <div className="h-full">
       <Editor
@@ -8,7 +8,7 @@ function CodeEditor({ code, language, onChange }) {
         language={language}
         value={code}
         onChange={onChange}
-        theme="vs-dark"
+        theme={theme}
         options={{
           fontSize: 14,
           minimap: { enabled: false },
