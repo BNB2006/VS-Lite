@@ -36,28 +36,6 @@ function App() {
   return (
     <div className="h-screen  text-white flex flex-col overflow-hidden border border-black">
       <Header theme={theme} onToggleTheme={toggleTheme} />
-      
-      {/* <main className="flex-1 flex">
-        <div className="flex-1 flex flex-col">
-          <Tabs 
-            files={files} 
-            activeFileId={activeFileId} 
-            onTabClick={setActiveFileId} 
-          />
-          <div className="flex-1 border-r border-black">
-            <CodeEditor 
-              code={activeFile?.content || ''} 
-              language={activeFile?.language || 'html'}
-              theme={theme}
-              onChange={handleCodeChange} 
-            />
-          </div>
-        </div>
-        
-        <div className="flex-1">
-          <Preview htmlCode={getPreviewHTML()} />
-        </div>
-      </main> */}
 
       <div className='w-full h-full flex justify-'>
         <div className='w-[50%]'>
