@@ -26,7 +26,7 @@ const defaultFiles = [
     font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 100px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(175, 230, 211);
 }
 #counter {
     font-size: 48px;

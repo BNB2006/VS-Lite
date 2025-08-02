@@ -34,10 +34,10 @@ function App() {
   };
 
   return (
-    <div className="h-screen  text-white flex flex-col">
+    <div className="h-screen  text-white flex flex-col overflow-hidden border border-black">
       <Header theme={theme} onToggleTheme={toggleTheme} />
       
-      <main className="flex-1 flex">
+      {/* <main className="flex-1 flex">
         <div className="flex-1 flex flex-col">
           <Tabs 
             files={files} 
@@ -57,7 +57,27 @@ function App() {
         <div className="flex-1">
           <Preview htmlCode={getPreviewHTML()} />
         </div>
-      </main>
+      </main> */}
+
+      <div className='w-full h-full flex justify-'>
+        <div className='w-[50%]'>
+          <Tabs 
+            files={files} 
+            activeFileId={activeFileId} 
+            onTabClick={setActiveFileId} 
+          />
+          <div className="border-r border-black h-full w-full">
+            <CodeEditor 
+              code={activeFile?.content || ''} 
+              language={activeFile?.language || 'html'}
+              theme={theme}
+              onChange={handleCodeChange} 
+            />
+          </div>
+          </div>
+
+        <div className='w-[50%]'><Preview htmlCode={getPreviewHTML()} /></div>
+      </div>
     </div>
   );
 }
